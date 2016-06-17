@@ -1,3 +1,14 @@
+[TODO]
+1. Overview detail descriptions
+2. Pinouts detail descriptions
+3. Assembly module Picture & descriptions
+4. How to use BLE shepherd(freebird) detail descriptions
+5. Electrical Specifications test value
+6. upload Schematic picture
+
+
+
+
 # WeatherStation
 ---  
 ![WeatherStation ](http://imgur.com/blQHcna "WeatherStation ")  
@@ -46,9 +57,9 @@ This module have 4 functions, it can measure pressure, UV, voice dB value, tempe
 <a name="Assembly"></a>
 ## 3. Assembly  
 
-#### USB 5V Power moudle  
+#### USB 5V Power module  
 #### BLE module  
-#### Smart Power Relay module  
+#### WeatherStation module  
 
 <a name="How to use"></a>
 ## 4. How to use  
