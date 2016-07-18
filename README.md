@@ -1,84 +1,51 @@
-[TODO]
-1. Overview detail descriptions
-2. Pinouts detail descriptions
-3. Assembly module Picture & descriptions
-4. How to use BLE shepherd(freebird) detail descriptions
-5. Electrical Specifications test value
-6. upload Schematic picture
-
-
-
-
-# WeatherStation
+# WeatherStation  
 ---  
-![WeatherStation ](http://imgur.com/blQHcna "WeatherStation ")  
 
 ## Guide Content  
 
-1. [Overiew](#Overiew)  
-2. [Pinouts](#Pinouts)  
-3. [Assembly](#Assembly)  
-4. [How to use](#How to use)  
-5. [Electrical Specifications](#Electrical Specifications)  
-6. [Downloads](#Downloads)  
+1. [Introduction](#Introduction)  
+2. [Hardware Overview](#Hardware Overview)  
+3. [Usage](#Usage)  
+4. [Reference](#Reference)  
 
 
-<a name="Overiew"></a>
-## 1. Overview  
+<a name="Introduction"></a>
+## 1. Introduction  
 
-This module have 4 functions, it can measure pressure, UV, voice dB value, temperature and humidity. Most sensors is . Ex: control light on/off, to send a message, etc. Buttons's function are assigned by programmer and this functions will be transmit by BLE module.  
+Sivann的WeatherStation模組可偵測光、大氣壓力、溫度、濕度、聲音以及空氣的塵埃(選擇性)。  
+Si1132可感測UV、IR以及可見光，LPS25HB感測大氣壓力，SHT20感測溫度、溼度，SPW2430HR5H感測聲音，其相關的詳細資料在Reference，請自行參閱。  
+#### Sivann模組疊合  
+Sivann除了感測模組外還有供電模組及無線模組，使用者可以將模組疊合使用，更為方便，相關介紹在sivann模組疊合介紹。  
 
-* Features
-  * Measure temperature & humidity with SHT20
-  * Measure ambient light/UVI with Si1132
-  * Measure sound level with on-board Mic
-    Range:30 to 80dB
-  * Measure air pressure level with LPS25HB
-    Range:260hPa to 1260hPa
-    Altitude: 10100m to -1875m
-    Resolution: 0.03 hPa (0.25m)
-  * Connect a DSM501A dust sensor to measure PM2.5/PM10 (optional)
+* Features  
+  * 量測可見光、UVI以及IR  
+  * 量測大氣壓力  
+  * 量測溫度、溼度  
+  * 量測聲音的變化  
+  * 量測空氣塵埃(選擇性)  
 
-<a name="Pinouts"></a>
-## 2. Pinouts  
+<a name="Hardware Overview"></a>
+## 2. Hardware Overview  
 
+![WeatherStation](http://i.imgur.com/5QK3wNm.png "WeatherStation")
+
+### Pinouts  
 * Power Pins:  
-  * Vcc  
-  * GND  
-* I2C  
-  * SDA  
-  * SCL  
-* PM2.5
-  * Vo1
-  * Vo1
-* P_INT
-* MIC
+  * 5V – 供電給LM358及PM2.5/PM10(選擇性)。  
+  * Vcc(3.3V) – 供電給Buzzer。  
+  * GND – 5V及Vcc共同的地。   
+* AO  
+MQ-2的電壓輸出。  
+* Alarm_EN  
+用來控制Buzzer。  
 
-<a name="Assembly"></a>
-## 3. Assembly  
+<a name="Usage"></a>
+## 3. Usage  
 
-#### USB 5V Power module  
-#### BLE module  
-#### WeatherStation module  
+供電5V及Vcc並接好GND。  
 
-<a name="How to use"></a>
-## 4. How to use  
-
-* BLE Dongle + BLE shepherd(freebird)  
-* How to use BLE shepherd(freebird)  
-
-<a name="Electrical Specifications"></a>
-## 5. Electrical Specifications   
-
-| Parameter         | Absolute Maximum Rating  | Uints  
-|-------------------|--------------------------|-------------  
-| Power             |                          |  W  
-| Operating current |                          |  A  
-| Vcc to Gound      |                          |  V  
-| 5V to Ground      |                          |  V  
-
-<a name="Downloads"></a>
-## 6. Downloads  
+<a name="Reference"></a>
+## 4. Reference   
 
 [LM358 Datasheets](http://www.ti.com/lit/ds/symlink/lm358.pdf "LM358")  
 [Si1132 Datasheets](https://www.silabs.com/Support%20Documents/TechnicalDocs/Si1132.pdf "Si1132")  
